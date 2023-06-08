@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interest Calculator</title>
+  <style>
+    /* Some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: lightpink;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      width: 200px;
+      padding: 5px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    #result{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interest Calculator</h1>
+  <form id="interestForm">
+    <label for="principal">Principal Amount:</label>
+    <input type="number" id="principal" required><br>
+    
+    <label for="rate">Interest Rate:</label>
+    <input type="number" id="rate" required><br>
+    
+    <label for="time">Time (in years):</label>
+    <input type="number" id="time" required><br>
+    
+    <button type="button" onclick="calculateInterest()">Calculate</button>
+  </form>
+  
+  <div id="result"></div>
+  
+  <script>
+    function calculateInterest() {
+      var principal = parseFloat(document.getElementById('principal').value);
+      var rate = parseFloat(document.getElementById('rate').value);
+      var time = parseFloat(document.getElementById('time').value);
+      
+      var interest = (principal * rate * time) / 100;
+      
+      var resultElement = document.getElementById('result');
+      resultElement.innerHTML = 'Interest: ' + interest.toFixed(2);
+    }
+  </script>
+</body>
+</html>
