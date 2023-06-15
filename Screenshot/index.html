@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Take screenshot by using JavaScript?
+	</title>
+
+	
+	<script src=
+"https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
+	</script>
+
+
+	<style>
+		#photo {
+            width: 500px;
+            height: 300px;
+			border: 4px solid green;
+			padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+		}
+        .img-box{
+            background-image: url("family.jpg");
+            height: 200px;
+            width: 300px;
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+        }
+	</style>
+</head>
+
+<body>
+	<div id="photo">
+        <div class="img-box"> </div>
+		<h1>Congratulations!</h1>
+		
+		<button onclick="takeshot()">
+			Take Screenshot
+		</button>
+	</div>
+	<h1>Screenshot:</h1>
+	<div id="output"></div>
+
+	<script type="text/javascript">
+
+	
+		function takeshot() {
+			let div =
+				document.getElementById('photo');
+
+			html2canvas(div).then(
+				function (canvas) {
+					document
+					.getElementById('output')
+					.appendChild(canvas);
+				})
+		}
+	</script>
+</body>
+
+</html>
