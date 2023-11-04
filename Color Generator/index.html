@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Generator</h1>
+        <div id="color-box" class="color-box">
+            
+        </div>
+        <p id="color-value">rgba(0, 0, 0, 1.0)</p>
+        <div class="input-sliders">
+            <label for="red-slider">Red:</label>
+            <input type="range" id="red-slider" min="0" max="255" value="0">
+            <label for="green-slider">Green:</label>
+            <input type="range" id="green-slider" min="0" max="255" value="0">
+            <label for="blue-slider">Blue:</label>
+            <input type="range" id="blue-slider" min="0" max="255" value="0">
+            <label for="alpha-slider">Alpha:</label>
+            <input type="range" id="alpha-slider" min="0" max="1" step="0.01" value="1.0">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
